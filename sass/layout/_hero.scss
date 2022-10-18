@@ -1,0 +1,90 @@
+
+.hero{
+  background-image: linear-gradient(
+      to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/hero/hero_img-mobile.jpg");
+  max-width: 480px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  text-align: center;
+
+  padding-top: 116px;
+}
+
+.hero__title {
+  color: var(--light-text-color);
+  @include font (26px,900,1.6);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 768px), screen and (min-resolution: 192dpi) and (max-width: 768px), screen and (min-resolution: 2dppx) and (max-width: 768px) {
+    .hero {
+    background-image:  linear-gradient(
+      to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero/hero_img-mobile@2x.jpg);
+        }
+      }
+
+// 480px+
+
+@media screen and (min-width: 480px) {
+  .hero__title{
+    width: 360px;
+  }
+}
+
+// 768px+
+
+@media screen and (min-width: 768px) {
+  .hero{
+    background-image:  linear-gradient(
+      to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/hero/hero_img-tablet.jpg");
+      max-width: 768px;  
+  }
+}  
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+  background-image:  linear-gradient(
+  to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero/hero_img-tablet@2x.jpg);
+      }
+}
+
+// 1200px+
+
+@media screen and (min-width: 1200px) {
+  .hero{
+      background-image:  linear-gradient(
+      to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/hero/hero_img-desktop.jpg");
+      padding-top: 200px;
+      padding-bottom: 200px;
+      height: 600px;
+      max-width: 1600px; 
+    }
+  .hero__title{
+    @include font (44px,900,1.36);
+    width: 690px;
+  }    
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx)  and (min-width: 1200px){
+  .hero {
+  background-image:  linear-gradient(
+  to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero/hero_img-desktop@2x.jpg);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600px;
+      }
+      .hero__title{
+      @include font (44px,900,1.36);
+      width: 690px;
+    } 
+    }
